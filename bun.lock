@@ -5,7 +5,7 @@
     "": {
       "name": "jtbd-lead-qualifier",
       "dependencies": {
-        "persona-forge": "github:jefo/persona-forge#v0.2.0",
+        "persona-forge": "github:jefo/persona-forge#v0.2.1",
       },
       "devDependencies": {
         "@types/bun": "latest",
@@ -20,7 +20,7 @@
 
     "bun-types": ["bun-types@1.4.4", "", { "dependencies": { "@types/node": "*", "undici-types": "*" } }, "sha512-yjrJh5oGX7mMPKGd19YXyIjmEuj4G4zNC30bs7PM9Az7NQ3ndF3j6hbeRdvJTRQEhJ/FYQwW0a2moweEi2hMxQ=="],
 
-    "persona-forge": ["persona-forge@github:jefo/persona-forge#2032ee5", { "dependencies": { "zod": "^4.1.5" } }, "jefo-persona-forge-2032ee5"],
+    "persona-forge": ["persona-forge@github:jefo/persona-forge#ae86a9a", { "dependencies": { "zod": "^4.1.5" } }, "jefo-persona-forge-ae86a9a"],
 
     "typescript": ["typescript@5.9.3", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="],
 

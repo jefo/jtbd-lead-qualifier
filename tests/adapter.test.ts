@@ -80,7 +80,7 @@ describe("Telegram adapter", () => {
 			{
 				callback_query: {
 					id: "2",
-					data: `ADD_JOB|{"value":"Квалификация лидов"}`,
+					data: `ADD_JOB|0`,
 					message: { chat: { id: 42 } },
 				},
 			},
@@ -94,7 +94,7 @@ describe("Telegram adapter", () => {
 			{
 				callback_query: {
 					id: "4",
-					data: `ADD_CONTEXT|{"value":"Telegram"}`,
+					data: `ADD_CONTEXT|0`,
 					message: { chat: { id: 42 } },
 				},
 			},
@@ -108,21 +108,21 @@ describe("Telegram adapter", () => {
 			{
 				callback_query: {
 					id: "6",
-					data: `SELECT_STRUGGLE|{"value":"Теряем лиды"}`,
+					data: `SELECT_STRUGGLE|1`,
 					message: { chat: { id: 42 } },
 				},
 			},
 			{
 				callback_query: {
 					id: "7",
-					data: `SELECT_OUTCOME|{"value":"Рост конверсии"}`,
+					data: `SELECT_OUTCOME|0`,
 					message: { chat: { id: 42 } },
 				},
 			},
 			{
 				callback_query: {
 					id: "8",
-					data: `ADD_EXTRA|{"value":"Интеграция с CRM"}`,
+					data: `ADD_EXTRA|0`,
 					message: { chat: { id: 42 } },
 				},
 			},
@@ -136,14 +136,14 @@ describe("Telegram adapter", () => {
 			{
 				callback_query: {
 					id: "10",
-					data: `SELECT_TIMELINE|{"value":"1–2 недели"}`,
+					data: `SELECT_TIMELINE|0`,
 					message: { chat: { id: 42 } },
 				},
 			},
 			{
 				callback_query: {
 					id: "11",
-					data: `SELECT_BUDGET|{"value":"$2500+"}`,
+					data: `SELECT_BUDGET|2`,
 					message: { chat: { id: 42 } },
 				},
 			},

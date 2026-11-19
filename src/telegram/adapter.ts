@@ -126,13 +126,22 @@ export class JtbdTelegramBot {
 	}
 
 	private async handleCallback(chatId: number, data: string): Promise<void> {
-		const [event, json] = data.split("|", 2);
+		const [event, suffix] = data.split("|", 2);
 		if (!event) return;
 
 		let payload: Record<string, unknown> = {};
-		if (json) {
+
+		if (suffix && /^\d+$/.test(suffix)) {
+			// A payload button sends its index in the current screen, not JSON:
+			// Telegram limits callback_data to 64 bytes.
+			const active = await this.engine.getActiveConversation(String(chatId));
+			if (active && this.persona) {
+				const screen = this.engine.screen(this.persona, active);
+				payload = screen.buttons[Number(suffix)]?.payload ?? {};
+			}
+		} else if (suffix && suffix.startsWith("{")) {
 			try {
-				payload = JSON.parse(json) as Record<string, unknown>;
+				payload = JSON.parse(suffix) as Record<string, unknown>;
 			} catch {
 				await this.api.sendMessage(chatId, {
 					component: "message",

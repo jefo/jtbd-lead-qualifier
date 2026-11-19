@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "persona-forge": "github:jefo/persona-forge#v0.2.0"
+    "persona-forge": "github:jefo/persona-forge#v0.2.1"
   },
   "devDependencies": {
     "@types/bun": "latest",
